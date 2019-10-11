@@ -1,5 +1,5 @@
 {
-  "name": "vue-a11y-components",
+  "name": "@simon-siefke/vue-a11y-components",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -10,7 +10,7 @@
     "build:unpkg": "rollup --config rollup.config.js --format iife"
   },
   "keywords": [],
-  "author": "",
+  "author": "simon-siefke",
   "license": "MIT",
   "devDependencies": {
     "rollup": "^1.23.1",
