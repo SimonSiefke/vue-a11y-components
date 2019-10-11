@@ -17,7 +17,7 @@
       :id="`option-${option}`"
       role="option"
     >
-      <slot>
+      <slot :option="option">
         {{ option }}
       </slot>
     </li>
