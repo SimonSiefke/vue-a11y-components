@@ -33,15 +33,16 @@ export default {
       required: true
     }
   },
-  data() {
-    return {
-      activeIndex: 0
-    };
+  props: {
+    activeIndex: {
+      type: Number,
+      required: true
+    }
   },
   methods: {
     selectOption(index) {
       this.$el.style.display = "none";
-      this.activeIndex = index;
+      this.$emit("update:activeIndex", index);
       this.$emit("selectOption", this.options[index]);
     },
     handleKeyDown(event) {
@@ -53,21 +54,21 @@ export default {
           break;
         case "ArrowUp":
           if (this.activeIndex !== 0) {
-            this.activeIndex--;
+            this.$emit("update:activeIndex", this.activeIndex - 1);
           }
           break;
         case "ArrowDown":
           if (this.activeIndex !== this.options.length - 1) {
-            this.activeIndex++;
+            this.$emit("update:activeIndex", this.activeIndex + 1);
           }
           break;
         case "Home":
           event.preventDefault();
-          this.activeIndex = 0;
+          this.$emit("update:activeIndex", 0);
           break;
         case "End":
           event.preventDefault();
-          this.activeIndex = this.options.length - 1;
+          this.$emit("update:activeIndex", this.options.length - 1);
           break;
         default:
           break;
