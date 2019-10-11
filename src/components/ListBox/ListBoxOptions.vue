@@ -31,9 +31,7 @@ export default {
     options: {
       type: Array,
       required: true
-    }
-  },
-  props: {
+    },
     activeIndex: {
       type: Number,
       required: true
