@@ -1,7 +1,7 @@
-export { default as ListBox } from './components/ListBox/ListBox.vue'
+export { default as AListBox } from './src/components/ListBox/ListBox.vue'
 export {
-  default as ListBoxOptions,
-} from './components/ListBox/ListBoxOptions.vue'
+  default as AListBoxOptions,
+} from './src/components/ListBox/ListBoxOptions.vue'
 export {
-  default as ListBoxButton,
-} from './components/ListBox/ListBoxButton.vue'
+  default as AListBoxButton,
+} from './src/components/ListBox/ListBoxButton.vue'
